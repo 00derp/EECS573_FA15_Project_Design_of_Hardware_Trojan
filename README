@@ -1,3 +1,8 @@
+Odysseus - Design of Hardware Trojan
+EECS573 FA15 Final Project
+Authors: Xiaoming Guo, Sijia He, Jiong Xue
+
+
 Verilog files modified: (Located at verilog/)
   1.Added Trojan.v (implementation of T1)
   2.Changed id_stage.v to add the Trojan
