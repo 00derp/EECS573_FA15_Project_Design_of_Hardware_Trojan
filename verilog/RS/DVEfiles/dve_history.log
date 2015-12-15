@@ -1,0 +1,82 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+gui_create_pref_category -category {schem_obj_name}
+gui_create_pref_key -category {schem_obj_name} -key {show_cell_and_pin_with_symbol_name} -value_type {bool} -value {false}
+gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {string} -value {Helvetica,10,-1,5,50,0,0,0,0,0}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /afs/umich.edu/user/x/m/xmguo/Documents/470/lab1/session.inter.vpd.tcl -ignore_errors} {gui_load_session -ignore_errors -file /afs/umich.edu/user/x/m/xmguo/Documents/470/lab1/session.inter.vpd.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 2498
+gui_set_state_value -category Layout -key child_console_size_y -value 105
+gui_set_state_value -category Layout -key child_data_size_x -value 105
+gui_set_state_value -category Layout -key child_data_size_y -value 1101
+gui_set_state_value -category Layout -key child_driver_size_x -value 2216
+gui_set_state_value -category Layout -key child_driver_size_y -value 179
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 105
+gui_set_state_value -category Layout -key child_hier_size_y -value 1101
+gui_set_state_value -category Layout -key child_hier_sort_order -value 1
+gui_set_state_value -category Layout -key child_schematic_docknewline -value false
+gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_schematic_pos_y -value {-18}
+gui_set_state_value -category Layout -key child_schematic_size_x -value 2247
+gui_set_state_value -category Layout -key child_schematic_size_y -value 1092
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-18}
+gui_set_state_value -category Layout -key child_source_size_x -value 2291
+gui_set_state_value -category Layout -key child_source_size_y -value 1097
+gui_set_state_value -category Layout -key child_wave_colname -value 349
+gui_set_state_value -category Layout -key child_wave_colvalue -value 349
+gui_set_state_value -category Layout -key child_wave_left -value 703
+gui_set_state_value -category Layout -key child_wave_right -value 1716
+gui_set_state_value -category Layout -key main_pos_x -value 59
+gui_set_state_value -category Layout -key main_pos_y -value 113
+gui_set_state_value -category Layout -key main_size_x -value 2557
+gui_set_state_value -category Layout -key main_size_y -value 1408
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-18}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 2429
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 1184
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 10
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 131
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 2434
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1408
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_sim_run Ucli -exe dve -args {-ucligui  +vc +memcbk} -dir .
+gui_list_select -id Data.1 -selected  { testbench.clock   }
+gui_list_select -id Data.1 { testbench.reset  testbench.ROB_branch_mispredict_in  testbench.ex_CDB_arb_stall_in  testbench.ex_MULT_busy_in  testbench.id_rs_srcA_valid_in  testbench.id_rs_srcB_valid_in  testbench.id_rs_valid_inst_in  testbench.id_rs_uncond_branch_in  testbench.id_rs_cond_branch_in  {testbench.id_rs_opa_select_in[1:0]}  {testbench.id_rs_opb_select_in[1:0]}  {testbench.id_rs_opcode_in[4:0]}  {testbench.id_rs_IR_in[31:0]}  {testbench.id_rs_PC_plus_4_in[63:0]}  {testbench.id_rs_predicted_target_addr_in[63:0]}  {testbench.id_rs_srcA_PRF_num_in[5:0]}  {testbench.id_rs_srcB_PRF_num_in[5:0]}  {testbench.id_rs_dest_PRF_num_in[5:0]}  {testbench.ex_CDB_tag_in[5:0]}  testbench.RS_full_out  testbench.RS_uncond_branch_out  testbench.RS_cond_branch_out  {testbench.RS_opa_select_out[1:0]}  {testbench.RS_opb_select_out[1:0]}  {testbench.RS_opcode_out[4:0]}  {testbench.RS_IR_out[31:0]}  {testbench.RS_PC_plus_4_out[63:0]}  {testbench.RS_predicted_target_addr_out[63:0]}  {testbench.RS_srcA_PRF_num_out[5:0]}  {testbench.RS_srcB_PRF_num_out[5:0]}  {testbench.RS_dest_PRF_num_out[5:0]}   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { testbench.clock testbench.reset testbench.ROB_branch_mispredict_in testbench.ex_CDB_arb_stall_in testbench.ex_MULT_busy_in testbench.id_rs_srcA_valid_in testbench.id_rs_srcB_valid_in testbench.id_rs_valid_inst_in testbench.id_rs_uncond_branch_in testbench.id_rs_cond_branch_in {testbench.id_rs_opa_select_in[1:0]} {testbench.id_rs_opb_select_in[1:0]} {testbench.id_rs_opcode_in[4:0]} {testbench.id_rs_IR_in[31:0]} {testbench.id_rs_PC_plus_4_in[63:0]} {testbench.id_rs_predicted_target_addr_in[63:0]} {testbench.id_rs_srcA_PRF_num_in[5:0]} {testbench.id_rs_srcB_PRF_num_in[5:0]} {testbench.id_rs_dest_PRF_num_in[5:0]} {testbench.ex_CDB_tag_in[5:0]} testbench.RS_full_out testbench.RS_uncond_branch_out testbench.RS_cond_branch_out {testbench.RS_opa_select_out[1:0]} {testbench.RS_opb_select_out[1:0]} {testbench.RS_opcode_out[4:0]} {testbench.RS_IR_out[31:0]} {testbench.RS_PC_plus_4_out[63:0]} {testbench.RS_predicted_target_addr_out[63:0]} {testbench.RS_srcA_PRF_num_out[5:0]} {testbench.RS_srcB_PRF_num_out[5:0]} {testbench.RS_dest_PRF_num_out[5:0]} } -insertionbar
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_expand -id  Hier.1   testbench
+gui_list_select -id Hier.1 -current_item_name testbench.dut -current_item_type Scope  -selected  { testbench.dut   }
+gui_list_select -id Data.1 -selected  { testbench.dut.clock   }
+gui_list_select -id Data.1 { testbench.dut.reset  testbench.dut.ROB_branch_mispredict_in  {testbench.dut.ROB_ROB_num_in[4:0]}  testbench.dut.ex_MULT_busy_in  testbench.dut.ex_CDB_arb_stall_in  testbench.dut.id_rs_srcA_valid_in  testbench.dut.id_rs_srcB_valid_in  testbench.dut.id_rs_valid_inst_in  testbench.dut.id_rs_uncond_branch_in  testbench.dut.id_rs_cond_branch_in  testbench.dut.id_rs_cpuid_in  testbench.dut.id_rs_illegal_in  testbench.dut.id_rs_halt_in  {testbench.dut.id_rs_opa_select_in[1:0]}  {testbench.dut.id_rs_opb_select_in[1:0]}  {testbench.dut.id_rs_opcode_in[4:0]}  {testbench.dut.id_rs_IR_in[31:0]}  {testbench.dut.id_rs_PC_plus_4_in[63:0]}  {testbench.dut.id_rs_predicted_target_addr_in[63:0]}  {testbench.dut.id_rs_srcA_PRF_num_in[5:0]}  {testbench.dut.id_rs_srcB_PRF_num_in[5:0]}  {testbench.dut.id_rs_dest_PRF_num_in[5:0]}  {testbench.dut.ex_CDB_tag_in[5:0]}  testbench.dut.RS_full_out  testbench.dut.RS_valid_inst_out  testbench.dut.RS_uncond_branch_out  testbench.dut.RS_cond_branch_out  testbench.dut.RS_cpuid_out  testbench.dut.RS_illegal_out  testbench.dut.RS_halt_out  {testbench.dut.RS_opa_select_out[1:0]}  {testbench.dut.RS_opb_select_out[1:0]}  {testbench.dut.RS_opcode_out[4:0]}  {testbench.dut.RS_IR_out[31:0]}  {testbench.dut.RS_PC_plus_4_out[63:0]}  {testbench.dut.RS_predicted_target_addr_out[63:0]}  {testbench.dut.RS_srcA_PRF_num_out[5:0]}  {testbench.dut.RS_srcB_PRF_num_out[5:0]}  {testbench.dut.RS_dest_PRF_num_out[5:0]}  {testbench.dut.RS_ROB_num_out[4:0]}  {testbench.dut.free_list[7:0]}  {testbench.dut.choose_list[7:0]}  {testbench.dut.issue_list[7:0]}  {testbench.dut.wr_en[7:0]}  {testbench.dut.issue_en[7:0]}  testbench.dut.srcA_valid_in  testbench.dut.srcB_valid_in   }
+gui_open_window Wave
+gui_list_add -id Wave.2 -from Data.1 { testbench.dut.clock testbench.dut.reset testbench.dut.ROB_branch_mispredict_in {testbench.dut.ROB_ROB_num_in[4:0]} testbench.dut.ex_MULT_busy_in testbench.dut.ex_CDB_arb_stall_in testbench.dut.id_rs_srcA_valid_in testbench.dut.id_rs_srcB_valid_in testbench.dut.id_rs_valid_inst_in testbench.dut.id_rs_uncond_branch_in testbench.dut.id_rs_cond_branch_in testbench.dut.id_rs_cpuid_in testbench.dut.id_rs_illegal_in testbench.dut.id_rs_halt_in {testbench.dut.id_rs_opa_select_in[1:0]} {testbench.dut.id_rs_opb_select_in[1:0]} {testbench.dut.id_rs_opcode_in[4:0]} {testbench.dut.id_rs_IR_in[31:0]} {testbench.dut.id_rs_PC_plus_4_in[63:0]} {testbench.dut.id_rs_predicted_target_addr_in[63:0]} {testbench.dut.id_rs_srcA_PRF_num_in[5:0]} {testbench.dut.id_rs_srcB_PRF_num_in[5:0]} {testbench.dut.id_rs_dest_PRF_num_in[5:0]} {testbench.dut.ex_CDB_tag_in[5:0]} testbench.dut.RS_full_out testbench.dut.RS_valid_inst_out testbench.dut.RS_uncond_branch_out testbench.dut.RS_cond_branch_out testbench.dut.RS_cpuid_out testbench.dut.RS_illegal_out testbench.dut.RS_halt_out {testbench.dut.RS_opa_select_out[1:0]} {testbench.dut.RS_opb_select_out[1:0]} {testbench.dut.RS_opcode_out[4:0]} {testbench.dut.RS_IR_out[31:0]} {testbench.dut.RS_PC_plus_4_out[63:0]} {testbench.dut.RS_predicted_target_addr_out[63:0]} {testbench.dut.RS_srcA_PRF_num_out[5:0]} {testbench.dut.RS_srcB_PRF_num_out[5:0]} {testbench.dut.RS_dest_PRF_num_out[5:0]} {testbench.dut.RS_ROB_num_out[4:0]} {testbench.dut.free_list[7:0]} {testbench.dut.choose_list[7:0]} {testbench.dut.issue_list[7:0]} {testbench.dut.wr_en[7:0]} {testbench.dut.issue_en[7:0]} testbench.dut.srcA_valid_in testbench.dut.srcB_valid_in } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_list_select -id Wave.2 -selected  { testbench.dut.id_rs_cpuid_in   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.id_rs_cpuid_in  testbench.dut.id_rs_illegal_in   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.id_rs_cpuid_in  testbench.dut.id_rs_illegal_in  testbench.dut.id_rs_halt_in   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.id_rs_cpuid_in  testbench.dut.id_rs_illegal_in  testbench.dut.id_rs_halt_in  {testbench.dut.ROB_ROB_num_in[4:0]}   }
+gui_wv_scroll_hslidermove -id  Wave.2 0
+gui_marker_move -id  Wave.2 C1 160
+gui_marker_move -id  Wave.2 C1 199
+gui_list_select -id Wave.2 -selected  { testbench.dut.RS_cpuid_out   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.RS_cond_branch_out   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.RS_cpuid_out   }
+gui_list_select -id Wave.2 -selected  { testbench.dut.id_rs_cond_branch_in   }
+gui_close_window -window TopLevel.3
+gui_close_window -window TopLevel.1

@@ -1,0 +1,9 @@
+@@@ Unified Memory contents hex on left, decimal on right: 
+@@@
+@@@ mem[    0] = 20bf001620bf0008 : 2359604824804098056
+@@@ mem[    8] = 435a0401d3400000 : 4853195954330796032
+@@@ mem[   16] = 0000000000000555 : 1365
+@@@
+@@@
+@@@ System halted on HALT instruction
+@@@

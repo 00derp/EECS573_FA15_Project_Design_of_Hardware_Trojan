@@ -1,0 +1,19 @@
+Verilog files modified: (Located at verilog/)
+  1.Added Trojan.v (implementation of T1)
+  2.Changed id_stage.v to add the Trojan
+
+Random instruction generator:
+  A python code is located at testgenerator/random_test_gen.py, along with 100 randomly generated testcases
+
+Type 'make' before running the following scripts:
+Scripts for testings:
+  1.test.sh: Test all EECS470 testcases
+
+  Uncomment the code for calling $display in id_stage.v before running 2 and 3
+  2.test_random.sh: Test all the randomly generated testcases. 
+  3.test_prob.sh: Test the probability that T1 and T2 are triggered.
+  4.test_swactivity.sh: Test how many cycles out of total cycles are the two signals (specified in id_stage.v) equal to each other. 
+
+Type 'make syn' to synthesize the whole processor
+
+fib.s in the current directory is the modified testcase that can trigger the Trojan and cause an infinite loop.

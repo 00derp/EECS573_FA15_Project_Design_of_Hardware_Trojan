@@ -1,0 +1,107 @@
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 00, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 1, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 00, full = 0, wr_en = 0
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 01, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 02, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 03, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 04, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 05, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 06, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 07, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 08, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 09, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0a, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0b, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0c, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0d, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0e, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 0f, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 10, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 11, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 12, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 13, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 14, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 15, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 16, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 17, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 18, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 19, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1a, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1b, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1c, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1d, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1e, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 1, ROB_head = 00, ROB_tail = 1f, full = 0, wr_en = 0
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 1, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 1f, full = 1, wr_en = 1
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 01, ROB_dispatch_disable = 1, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 05, ROB_PRF_num_out = 0b, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 1, ROB_ROB_num_out = 01, ROB_dispatch_disable = 0, ROB_head = 01, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 07, ROB_PRF_num_out = 0d, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 1, ROB_ROB_num_out = 02, ROB_dispatch_disable = 0, ROB_head = 02, ROB_tail = 00, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 01, ROB_PRF_num_out = 03, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 1, ROB_is_branch_inst_out = 0, ROB_commit_out = 1, ROB_ROB_num_out = 03, ROB_dispatch_disable = 0, ROB_head = 03, ROB_tail = 01, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 02, ROB_PRF_num_out = 05, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 1, ROB_ROB_num_out = 04, ROB_dispatch_disable = 0, ROB_head = 04, ROB_tail = 02, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 03, ROB_PRF_num_out = 07, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 05, ROB_dispatch_disable = 0, ROB_head = 05, ROB_tail = 03, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 03, ROB_PRF_num_out = 07, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 05, ROB_dispatch_disable = 1, ROB_head = 05, ROB_tail = 04, full = 0, wr_en = 0
+
+ROB_ARF_num_out = 03, ROB_PRF_num_out = 07, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 05, ROB_dispatch_disable = 1, ROB_head = 05, ROB_tail = 04, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 03, ROB_PRF_num_out = 07, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 05, ROB_dispatch_disable = 1, ROB_head = 05, ROB_tail = 04, full = 1, wr_en = 0
+
+ROB_ARF_num_out = 03, ROB_PRF_num_out = 07, ROB_NPC_out = 0000000000000098, ROB_branch_mispredict_out = 1, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 1, ROB_commit_out = 1, ROB_ROB_num_out = 05, ROB_dispatch_disable = 0, ROB_head = 05, ROB_tail = 04, full = 1, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 00, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 1, ROB_is_branch_inst_out = 1, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 00, full = 0, wr_en = 0
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 01, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 02, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 03, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 04, full = 0, wr_en = 1
+
+ROB_ARF_num_out = 00, ROB_PRF_num_out = 01, ROB_NPC_out = 0000000000000000, ROB_branch_mispredict_out = 0, ROB_is_store_inst_out = 0, ROB_is_branch_inst_out = 0, ROB_commit_out = 0, ROB_ROB_num_out = 00, ROB_dispatch_disable = 0, ROB_head = 00, ROB_tail = 05, full = 0, wr_en = 0

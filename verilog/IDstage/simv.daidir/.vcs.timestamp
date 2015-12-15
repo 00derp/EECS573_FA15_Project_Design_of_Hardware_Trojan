@@ -1,0 +1,96 @@
+0 
+25
++vc
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -O -I/usr/caen/vcs-2013.06-sp1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mldflags=
+-Mobjects= /usr/caen/vcs-2013.06-sp1/amd64/lib/libvirsim.so /usr/caen/vcs-2013.06-sp1/amd64/lib/liberrorinf.so /usr/caen/vcs-2013.06-sp1/amd64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/usr/caen/vcs-2013.06-sp1/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mupdate
+-Mvcsaceobjs=
+-full64
+-gen_obj
+-line
+-o simv
+-sverilog
+../../sys_defs.vh
+/usr/caen/vcs-2013.06-sp1/amd64/bin/vcs1
+id_stage.v
+id_stage_test.v
+57
+sysc_uni_pwd=/afs/umich.edu/user/x/m/xmguo/Documents/470/group5/verilog/IDstage
+__GL_SHADER_DISK_CACHE=0
+_LMFILES_=/usr/caen/misc/modules/vcs/2013.06-sp1
+XMODIFIERS=@im=none
+XDG_SESSION_COOKIE=70427295c9423de1aefa7eaa00000012-1425862471.373439-953664
+XAUTHORITY=/var/run/gdm/auth-for-xmguo-3QAWUX/database
+WINDOWPATH=1
+VMR_MODE_FLAG=64
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/caen/vcs-2013.06-sp1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=amd64
+USERNAME=xmguo
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2013.06-sp1/amd64
+SW_VCS=2013.06-sp1
+SSH_AUTH_SOCK=/tmp/keyring-kWXZLc/socket.ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=3090
+SNPSLMD_LICENSE_FILE=/usr/caen/vcs-2013.06-sp1/license.dat:/usr/caen/vcs-2013.06-sp1/flexlm//license.dat
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2993,unix/unix:/tmp/.ICE-unix/2993
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_IM_MODULE=xim
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+ORBIT_SOCKETDIR=/tmp/orbit-xmguo
+NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=vcs/2013.06-sp1
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KRB5CCNAME=FILE:/tmp/krb5cc_99423597_kbZ8pd
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+HISTCONTROL=ignoredups
+G_BROKEN_FILENAMES=1
+GTK_RC_FILES=/etc/gtk/gtkrc:/afs/umich.edu/user/x/m/xmguo/.gtkrc-1.2-gnome2
+GNOME_KEYRING_SOCKET=/tmp/keyring-kWXZLc/socket
+GNOME_KEYRING_PID=2979
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDM_KEYBOARD_LAYOUT=us
+GDMSESSION=gnome
+DESKTOP_SESSION=gnome
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ABwZBujF0M,guid=f0e5a95a3c93b949a4e1a00200000062
+CVS_RSH=ssh
+COLORTERM=gnome-terminal
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+0
+3
+1425876614 id_stage.v
+1425787234 id_stage_test.v
+1425875451 ../../sys_defs.vh
+4
+0 
+1385615966 /usr/caen/vcs-2013.06-sp1/amd64/lib/libvirsim.so
+1385615701 /usr/caen/vcs-2013.06-sp1/amd64/lib/liberrorinf.so
+1385615452 /usr/caen/vcs-2013.06-sp1/amd64/lib/libsnpsmalloc.so
+1425876661 simv.daidir

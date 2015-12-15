@@ -1,0 +1,380 @@
+`timescale 1ns/100ps
+
+module testbench();
+  
+  logic clock, reset;
+  logic                  ROB_branch_mispredict_in;
+  logic                  ex_CDB_arb_stall_in;
+  logic                  ex_MULT_busy_in;
+  logic                  id_rs_srcA_valid_in;
+  logic                  id_rs_srcB_valid_in;
+  logic                  id_rs_valid_inst_in;
+  logic                  id_rs_uncond_branch_in;
+  logic                  id_rs_cond_branch_in;
+  logic [1:0]            id_rs_opa_select_in; 
+  logic [1:0]            id_rs_opb_select_in;
+  logic [4:0]            id_rs_opcode_in;
+  logic [31:0]           id_rs_IR_in; 
+  logic [63:0]           id_rs_PC_plus_4_in;
+  logic [63:0]           id_rs_predicted_target_addr_in;
+  logic [`PRF_width-1:0] id_rs_srcA_PRF_num_in;
+  logic [`PRF_width-1:0] id_rs_srcB_PRF_num_in;
+  logic [`PRF_width-1:0] id_rs_dest_PRF_num_in;
+  logic [`PRF_width-1:0] ex_CDB_tag_in;
+
+  logic                    RS_full_out;
+  logic                    RS_uncond_branch_out;
+  logic                    RS_cond_branch_out;
+  logic   [1:0]            RS_opa_select_out; 
+  logic   [1:0]            RS_opb_select_out;
+  logic   [4:0]            RS_opcode_out;
+  logic   [31:0]           RS_IR_out;
+  logic   [63:0]           RS_PC_plus_4_out;
+  logic   [63:0]           RS_predicted_target_addr_out;
+  logic   [`PRF_width-1:0] RS_srcA_PRF_num_out;
+  logic   [`PRF_width-1:0] RS_srcB_PRF_num_out;
+  logic   [`PRF_width-1:0] RS_dest_PRF_num_out;
+
+
+  RS dut (
+    .clock(clock),
+    .reset(reset),
+    .ROB_branch_mispredict_in(ROB_branch_mispredict_in),
+    .ex_MULT_busy_in(ex_MULT_busy_in),
+    .ex_CDB_arb_stall_in(ex_CDB_arb_stall_in),
+    .id_rs_srcA_valid_in(id_rs_srcA_valid_in),
+    .id_rs_srcB_valid_in(id_rs_srcB_valid_in),
+    .id_rs_valid_inst_in(id_rs_valid_inst_in),
+    .id_rs_uncond_branch_in(id_rs_uncond_branch_in),
+    .id_rs_cond_branch_in(id_rs_cond_branch_in),
+    .id_rs_opa_select_in(id_rs_opa_select_in),
+    .id_rs_opb_select_in(id_rs_opb_select_in),
+    .id_rs_opcode_in(id_rs_opcode_in),
+    .id_rs_IR_in(id_rs_IR_in),
+    .id_rs_PC_plus_4_in(id_rs_PC_plus_4_in),
+    .id_rs_predicted_target_addr_in(id_rs_predicted_target_addr_in),
+    .id_rs_srcA_PRF_num_in(id_rs_srcA_PRF_num_in),
+    .id_rs_srcB_PRF_num_in(id_rs_srcB_PRF_num_in),
+    .id_rs_dest_PRF_num_in(id_rs_dest_PRF_num_in),
+    .ex_CDB_tag_in(ex_CDB_tag_in),
+
+    .RS_full_out(RS_full_out),
+    .RS_uncond_branch_out(RS_uncond_branch_out),
+    .RS_cond_branch_out(RS_cond_branch_out),
+    .RS_opa_select_out(RS_opa_select_out),
+    .RS_opb_select_out(RS_opb_select_out),
+    .RS_opcode_out(RS_opcode_out),
+    .RS_IR_out(RS_IR_out),
+    .RS_PC_plus_4_out(RS_PC_plus_4_out),
+    .RS_predicted_target_addr_out(RS_predicted_target_addr_out),
+    .RS_srcA_PRF_num_out(RS_srcA_PRF_num_out),
+    .RS_srcB_PRF_num_out(RS_srcB_PRF_num_out),
+    .RS_dest_PRF_num_out(RS_dest_PRF_num_out)
+  );
+
+  task check_correct_all;
+    input                  RS_full_out_tb;    
+    input                  RS_uncond_branch_out_tb;
+    input                  RS_cond_branch_out_tb;
+    input [1:0]            RS_opa_select_out_tb;
+    input [1:0]            RS_opb_select_out_tb;
+    input [4:0]            RS_opcode_out_tb;
+    input [31:0]           RS_IR_out_tb;
+    input [63:0]           RS_PC_plus_4_out_tb;
+    input [63:0]           RS_predicted_target_addr_out_tb;
+    input [`PRF_width-1:0] RS_srcA_PRF_num_out_tb;
+    input [`PRF_width-1:0] RS_srcB_PRF_num_out_tb; 
+    input [`PRF_width-1:0] RS_dest_PRF_num_out_tb;
+    input string           error_message;
+    #2;
+    if (
+        RS_full_out_tb                  == RS_full_out &&
+        RS_uncond_branch_out_tb         == RS_uncond_branch_out &&
+        RS_cond_branch_out_tb           == RS_cond_branch_out &&
+        RS_opa_select_out_tb            == RS_opa_select_out &&
+        RS_opb_select_out_tb            == RS_opb_select_out &&
+        RS_opcode_out_tb                == RS_opcode_out &&
+        RS_IR_out_tb                    == RS_IR_out &&
+        RS_PC_plus_4_out_tb             == RS_PC_plus_4_out &&
+        RS_predicted_target_addr_out_tb == RS_predicted_target_addr_out &&
+        RS_srcA_PRF_num_out_tb          == RS_srcA_PRF_num_out &&
+        RS_srcB_PRF_num_out_tb          == RS_srcB_PRF_num_out &&
+        RS_dest_PRF_num_out_tb          == RS_dest_PRF_num_out)
+      ;
+    else begin
+      $display(error_message);
+      $display("@@@Failed...");
+      $finish;
+    end
+  endtask
+
+  task check_correct_partial;
+    input [63:0]           RS_PC_plus_4_out_tb;
+    input [`PRF_width-1:0] RS_dest_PRF_num_out_tb;
+    input string           error_message;
+    #2;
+    if (
+        RS_PC_plus_4_out_tb    == RS_PC_plus_4_out &&
+        RS_dest_PRF_num_out_tb == RS_dest_PRF_num_out)
+      ;
+    else begin
+      $display(error_message);
+      $display("@@@Failed...");
+      $finish;
+    end
+  endtask
+
+  always begin
+    #5;
+    clock=~clock;
+  end
+  
+  initial begin
+    clock                          = 0;
+    reset                          = 1; 
+    ROB_branch_mispredict_in       = 0;
+    ex_CDB_arb_stall_in            = 0;  
+    ex_MULT_busy_in                = 0;
+    id_rs_srcA_valid_in            = 0; 
+    id_rs_srcB_valid_in            = 0; 
+    id_rs_valid_inst_in            = 0;
+    id_rs_uncond_branch_in         = 0; 
+    id_rs_cond_branch_in           = 0; 
+    id_rs_opa_select_in            = 0; 
+    id_rs_opb_select_in            = 0; 
+    id_rs_opcode_in                = 0; 
+    id_rs_IR_in                    = 0; 
+    id_rs_PC_plus_4_in             = 0; 
+    id_rs_predicted_target_addr_in = 0; 
+    id_rs_srcA_PRF_num_in          = 0; 
+    id_rs_srcB_PRF_num_in          = 0; 
+    id_rs_dest_PRF_num_in          = 0; 
+    ex_CDB_tag_in                  = 0; 
+
+  
+    //Check whether RS can sucessfully dispatch instruction and wake up
+    @(negedge clock);
+    reset = 0;
+    ex_CDB_arb_stall_in            = 0;  
+    id_rs_srcA_valid_in            = 1; 
+    id_rs_srcB_valid_in            = 1; 
+    id_rs_valid_inst_in            = 1;
+    id_rs_uncond_branch_in         = 1; 
+    id_rs_cond_branch_in           = 1; 
+    id_rs_opa_select_in            = 3; 
+    id_rs_opb_select_in            = 2; 
+    id_rs_opcode_in                = 1 << 4; 
+    id_rs_IR_in                    = 1 << 20; 
+    id_rs_PC_plus_4_in             = 1 << 63; 
+    id_rs_predicted_target_addr_in = 1 << 63; 
+    id_rs_srcA_PRF_num_in          = 1 <<`PRF_width-1; 
+    id_rs_srcB_PRF_num_in          = 1 <<`PRF_width-1; 
+    id_rs_dest_PRF_num_in          = 1 <<`PRF_width-1; 
+    ex_CDB_tag_in                  = 0; 
+
+    check_correct_all(0,0,0,0,0,0,0,0,0,0,0,0,"@@@Error when resetting RS");
+    
+    //Make sure an invalid instruction is not dispatched.
+    @(negedge clock);
+    reset = 0;
+    ex_CDB_arb_stall_in            = 0;  
+    id_rs_srcA_valid_in            = 1; 
+    id_rs_srcB_valid_in            = 1; 
+    id_rs_valid_inst_in            = 0;
+    id_rs_uncond_branch_in         = 1; 
+    id_rs_cond_branch_in           = 1; 
+    id_rs_opa_select_in            = 3; 
+    id_rs_opb_select_in            = 3; 
+    id_rs_opcode_in                = 1 << 4; 
+    id_rs_IR_in                    = 1 << 20; 
+    id_rs_PC_plus_4_in             = 1 << 63; 
+    id_rs_predicted_target_addr_in = 1 << 63; 
+    id_rs_srcA_PRF_num_in          = 1 <<`PRF_width-1; 
+    id_rs_srcB_PRF_num_in          = 1 <<`PRF_width-1; 
+    id_rs_dest_PRF_num_in          = 1 <<`PRF_width-1; 
+    ex_CDB_tag_in                  = 0; 
+    
+    //first line:  full, uncond_branch, cond_branch, opa_select, opb_select
+    //second line: opcode, IR, PC_plus_4, predicted,target_addr
+    //third line:  srcA/srcB/dest_PRF_num
+    //fourth line: Error message to be print.
+    check_correct_all(0,1,1,3,2,
+                  1<<4,1<<20,1<<63,1<<63,
+                  1<<`PRF_width-1,1<<`PRF_width-1,1<<`PRF_width-1,
+                  "@@@Dispatch or wake up logic not correct");
+
+    //check whether RS can hear CDB_tag
+    //Since we have tested that the RS can load the correct value,
+    //we only use PC_plus_4 and dest_PRF_num as tags for instructions.
+    @(negedge clock);
+    ex_CDB_arb_stall_in            = 0;  
+    id_rs_srcA_valid_in            = 0; 
+    id_rs_srcB_valid_in            = 0; 
+    id_rs_valid_inst_in            = 1;
+    id_rs_uncond_branch_in         = 0; 
+    id_rs_cond_branch_in           = 0; 
+    id_rs_opa_select_in            = 0; 
+    id_rs_opb_select_in            = 0; 
+    id_rs_opcode_in                = 0; 
+    id_rs_IR_in                    = 0; 
+    id_rs_PC_plus_4_in             = 4; 
+    id_rs_predicted_target_addr_in = 0; 
+    id_rs_srcA_PRF_num_in          = 1; 
+    id_rs_srcB_PRF_num_in          = 1; 
+    id_rs_dest_PRF_num_in          = 10; 
+    ex_CDB_tag_in                  = 1; 
+
+    check_correct_all(0,0,0,0,0,0,0,0,0,0,0,0,"@@@An invalid instruction is being dispatched");
+
+
+    @(negedge clock);
+    id_rs_srcA_valid_in   = 1;
+    id_rs_srcB_valid_in   = 0;
+    id_rs_PC_plus_4_in    = 8;
+    id_rs_srcA_PRF_num_in = 2;
+    id_rs_srcB_PRF_num_in = 4;
+    id_rs_dest_PRF_num_in = 5;
+    ex_CDB_tag_in         = 0; 
+    //Partial check mode
+    //PC_plus_4 + dest_PRF_num + Error Message
+    check_correct_partial(4, 10, "@@@Cannot hear CDB_tag before entering RS");
+
+
+    @(negedge clock);
+    id_rs_srcA_valid_in   = 0;
+    id_rs_srcB_valid_in   = 0;
+    id_rs_PC_plus_4_in    = 12;
+    id_rs_srcA_PRF_num_in = 3;
+    id_rs_srcB_PRF_num_in = 5;
+    id_rs_dest_PRF_num_in = 6;
+    ex_CDB_tag_in         = 0; 
+    //No instruction can wake up
+    check_correct_partial(0, 0, "@@@Wrong wake up logic");
+
+    @(negedge clock);
+    id_rs_srcA_valid_in   = 0;
+    id_rs_srcB_valid_in   = 0;
+    id_rs_PC_plus_4_in    = 16;
+    id_rs_srcA_PRF_num_in = 1;
+    id_rs_srcB_PRF_num_in = 1;
+    id_rs_dest_PRF_num_in = 0;
+    ex_CDB_tag_in         = 5; 
+    //No instruction can wake up
+    check_correct_partial(0, 0, "@@@Wrong wake up logic");
+    
+    @(negedge clock);
+    id_rs_srcA_valid_in   = 0;
+    id_rs_srcB_valid_in   = 0;
+    id_rs_PC_plus_4_in    = 20;
+    id_rs_srcA_PRF_num_in = 1;
+    id_rs_srcB_PRF_num_in = 1;
+    id_rs_dest_PRF_num_in = 0;
+    ex_CDB_tag_in         = 3; 
+    
+    //NPC = 12 instruction can wake up this cycle since CDB_tag = 3
+    check_correct_partial(12, 6, "@@@Cannot hear CDB/Wrong wake up logic");
+
+    @(negedge clock);
+    ex_CDB_tag_in         = 4;
+    //NPC = 8 instruction can wake up this cycle since CDB_tag = 4
+    check_correct_partial(8, 5, "@@@Cannot hear CDB/Wrong wake up logic");
+
+
+
+    @(negedge clock);
+    //No issuing from this cycle. Try to full the RS
+    //Currently top two RSes are occupied. 
+    ex_CDB_arb_stall_in = 1; 
+    id_rs_srcA_valid_in = 1;
+    id_rs_srcB_valid_in = 1;
+
+    for (int i=0; i < `RS_size - 3; i++)
+      @(negedge clock);
+
+    if (RS_full_out != 1) begin
+      $display("@@@RS should be full but RS_full_out is not set");
+      $display("@@@Failed...");
+      $finish;
+    end
+    
+    //Pretend there is branch mispredict.
+    //Need to squash the RS.
+    ROB_branch_mispredict_in = 1;
+    @(negedge clock);
+    check_correct_all(0,0,0,0,0,0,0,0,0,0,0,0,"@@@RS not squashed");
+
+
+    //No issuing from this cycle and full the RS. The newly dispatched
+    //instruction should not enter RS. We then stall the dispatch and
+    //issue all the instructions to see whether the RS is screwed up.
+    ex_CDB_arb_stall_in      = 1;
+    ROB_branch_mispredict_in = 0;
+    
+    for (int i = 0; i < 2 * `RS_size; i++) begin
+      id_rs_PC_plus_4_in    = 4 + 4*i;
+      id_rs_dest_PRF_num_in = 1 + i;
+      @(negedge clock);
+    end
+
+    ex_CDB_arb_stall_in = 0;
+    id_rs_valid_inst_in = 0;
+    for (int i = 0; i < `RS_size; i++) begin
+      check_correct_partial(4+4*i,1+i, "@@@Stalling logic incorrect");
+      @(negedge clock);
+    end
+    
+    id_rs_valid_inst_in      = 1;
+    ROB_branch_mispredict_in = 1;
+    @(negedge clock);
+    ROB_branch_mispredict_in = 0;
+    ex_CDB_tag_in            = 0;
+
+
+
+    //Testing whether can issue the correct instruction with
+    //new instruction (not able to be issued) being dispatched
+    //at the same time.
+    id_rs_srcA_valid_in   = 0;
+    id_rs_srcB_valid_in   = 0;
+    for (int i = 0; i < `RS_size; i++) begin
+      id_rs_PC_plus_4_in    = 4 + 4*i;
+      id_rs_srcA_PRF_num_in = i+1;
+      id_rs_srcB_PRF_num_in = i+1;
+      id_rs_dest_PRF_num_in = i+2;
+      @(negedge clock);
+    end
+
+
+    //RS is still dispatching 
+
+    id_rs_srcA_PRF_num_in = 0;
+    id_rs_srcB_PRF_num_in = 0;
+
+    for (int i = 0; i < `RS_size; i++) begin
+      ex_CDB_tag_in = `RS_size-i;
+      check_correct_partial(`RS_size*4-4*i,`RS_size+1-i, "@@@Wake up logic incorrect");
+      @(negedge clock);
+    end
+    
+    ROB_branch_mispredict_in = 1;
+    @(negedge clock);
+    ROB_branch_mispredict_in = 0;
+    ex_MULT_busy_in          = 1;
+    id_rs_srcA_valid_in      = 1;
+    id_rs_srcB_valid_in      = 1;
+    id_rs_PC_plus_4_in       = 4;
+    id_rs_dest_PRF_num_in    = 2;
+    id_rs_opcode_in          = `ALU_MULQ;
+    @(negedge clock)
+    //Nothing can be issued since MULT is busy and the instruction
+    //in RS is a multiply.
+    id_rs_PC_plus_4_in = 8;
+    check_correct_all(0,0,0,0,0,0,0,0,0,0,0,0,"@@@MULT instruction wakes up when FU is busy");
+    @(negedge clock)
+    ex_MULT_busy_in = 0;
+    check_correct_partial(4,2, "@@@MULT instruction does not wake up when FU is not busy");  
+    @(negedge clock)
+    $display("@@@PASSED!!!");
+    $finish;
+  end
+endmodule

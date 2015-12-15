@@ -1,0 +1,26 @@
+Chronologic VCS simulator copyright 1991-2013
+Contains Synopsys proprietary information.
+Compiler version H-2013.06-SP1_Full64; Runtime version H-2013.06-SP1_Full64;  Mar  9 01:08 2015
+VCD+ Writer H-2013.06-SP1_Full64 Copyright (c) 1991-2013 by Synopsys Inc.
+The file '/afs/umich.edu/user/x/m/xmguo/Documents/470/group5/verilog/RS/inter.vpd' was opened successfully.
+@@@PASSED!!!
+$finish called from file "RS_test.v", line 378.
+$finish at simulation time                 6000
+Simulation complete, time is 600000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 600000 ps
+CPU Time:      0.040 seconds;       Data structure size:   0.1Mb
+Mon Mar  9 01:08:35 2015
+Chronologic VCS simulator copyright 1991-2013
+Contains Synopsys proprietary information.
+Compiler version H-2013.06-SP1_Full64; Runtime version H-2013.06-SP1_Full64;  Mar  9 01:09 2015
+VCD+ Writer H-2013.06-SP1_Full64 Copyright (c) 1991-2013 by Synopsys Inc.
+The file '/afs/umich.edu/user/x/m/xmguo/Documents/470/group5/verilog/RS/inter.vpd' was opened successfully.
+@@@PASSED!!!
+$finish called from file "RS_test.v", line 378.
+$finish at simulation time                 6000
+Simulation complete, time is 600000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 600000 ps
+CPU Time:      0.040 seconds;       Data structure size:   0.1Mb
+Mon Mar  9 01:09:03 2015
